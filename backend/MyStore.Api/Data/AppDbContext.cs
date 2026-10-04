@@ -1,0 +1,3 @@
+using Microsoft.EntityFrameworkCore;using MyStore.Api.Models;
+namespace MyStore.Api.Data;
+public class AppDbContext:DbContext{public AppDbContext(DbContextOptions<AppDbContext> o):base(o){} public DbSet<User> Users=>Set<User>();public DbSet<Product> Products=>Set<Product>();public DbSet<Order> Orders=>Set<Order>();public DbSet<OrderItem> OrderItems=>Set<OrderItem>();public DbSet<WishlistItem> WishlistItems=>Set<WishlistItem>();public DbSet<Review> Reviews=>Set<Review>();}
